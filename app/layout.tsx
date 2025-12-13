@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { I18nProvider } from "@/lib/i18n";
 import { ThemeProvider } from "@/lib/theme";
+import { NavigationProgress } from "@/components/navigation-progress";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +30,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider>
+          <Suspense fallback={null}>
+            <NavigationProgress />
+          </Suspense>
           <I18nProvider>{children}</I18nProvider>
         </ThemeProvider>
       </body>
