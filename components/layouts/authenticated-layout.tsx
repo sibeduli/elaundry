@@ -33,7 +33,7 @@ import Link from "next/link";
 
 const menuItemsConfig = [
   { key: "dashboard", icon: LayoutDashboard, href: "/dashboard" },
-  { key: "buatOrder", icon: PlusCircle, href: "/order/new" },
+  { key: "buatOrder", icon: PlusCircle, href: "/orders/new" },
   { key: "daftarOrder", icon: ClipboardList, href: "/orders" },
   { key: "rekapData", icon: FileBarChart, href: "/reports" },
   { key: "dataPelanggan", icon: Users, href: "/customers" },
